@@ -1,0 +1,235 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="format-detection" content="telephone=no"/>
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script type="text/javascript" src="jquery.nanoscroller.js"></script>
+<link rel="stylesheet" href="nanoscroller.css">
+<style type="text/css">
+body{
+	font-family:微软雅黑;
+}
+.nano { background: #bba; width: 500px; height: 500px; font-size:12px;border-radius:8px; }
+
+.nano .content { 
+	padding: 20px;
+}
+
+.nano .pane {
+	background: #555;
+	width: 8px;
+	right: 1px;
+  margin: 5px;
+}
+
+.nano .slider {
+	background: #111;
+}
+</style>
+<script type="text/javascript">
+	
+	window.onload = function(){
+		alert(window.localStorage.username);
+		/**
+			var life = {};
+			life.age = 2;
+			life.flag = "wewer";
+			alert(life+life.flag);
+			var func1 = function(){
+					alert("t1 is start!");
+				}
+			func1();
+			func1 = function(){
+					alert("t1 second is start!");
+				}	
+			func1();	
+			function Sing(){
+					with(arguments.callee)
+					alert(author+":"+poem);
+				}
+			Sing.author = "李白";
+			Sing.poem = "仗剑载酒江湖行，四时风光皆不同。";
+			Sing();
+			Sing.author = "杜甫";
+			Sing.poem = "且行且歌似梦中，白发苍苍卖酒翁。";
+			Sing();		
+			**/
+			
+			var book = {
+					author:"beautiful",
+					isbn:'134654565546',
+					isPop:false
+				};
+			//alert(book.author);
+			book.title = "new";
+			//alert(book.title);
+			
+			//for(var att in book){
+			//	alert("BOOK属性："+att+":"+book[att]);
+			//	}
+			
+			function testLog(){
+					var log = document.getElementById("log");
+					if(!log){
+							log = document.createElement("div");
+							log.id = "log";
+							log.innerHTML = "<h1>这个是一个Log</h1>";
+							document.body.appendChild(log);
+						}
+				}
+			
+			//testLog();
+			
+			
+			
+			//alert(3/0);
+			//alert(3=="3");
+			
+			//testRegExp();
+			
+			//testTypeFormat();
+			//alert(testSwitch instanceof Array );
+			
+			//testArray();
+			
+			}
+	//onload至此执行的内容完毕
+	
+	$(function(){
+		$(".nano").nanoScroller({alwaysVisible: true});
+		$("#bottom").click(function(){
+			$(".nano").nanoScroller({scroll:'bottom'});		
+		});
+		$("#top").click(function(){
+			$(".nano").nanoScroller({scroll:'top'});
+		});
+	});
+	function testSwitch(idString){
+		var m = document.getElementById(idString).value;
+		//m = parseInt(m);
+		switch(m){
+				case "1":alert("你输入的是一"+m);break;
+				case 2:alert("你挺二的");break;
+				default:alert("小子，不要乱输东西啊！"+m);
+			}
+		}
+		
+		
+	//测试正则表达式
+	function testRegExp(){
+			var testString = "testString:1,2,3,4549";
+			var pattern = /\d+/g;	//匹配一个或者多个数字的实例
+			//alert(pattern.test(testString));  //true  匹配成功
+			//alert(testString.search(pattern));	//11 首次匹配成功的位置（从0数起）
+			//alert(testString.match(pattern));		//["1","2","3","4549"]  所有匹配组成的数组
+			//alert(testString.replace(pattern,"%%"));	//"testString:%%,%%,%%"  替换
+			alert(testString.split(/\D+/));		//[,"1","2","3","4549"] 非数字字符分割
+		
+		}	
+		
+		//测试数据类型转换
+		function testTypeFormat(){
+				var a = "6";
+				var aStr = new String(a);
+				alert(aStr.toString()+"--"+aStr.valueOf());
+			}
+			
+		//测试稀疏数组
+		function testArray(){
+				var a = [];
+				a[0] = 1;
+				a[10] = "goodBoy";
+				alert("a[5]:"+a[5]+"	a[12]:"+a[12]);
+				//alert(a.length);
+				testForInf(a);
+			}	
+		function testForInf(obj){
+				for(var attr in obj){
+						alert(attr);
+					}
+			}	
+	function testthis(me){
+		//alert(me.name);
+		var a = [1,-5,9,me.value];
+		alert(Math.max(1,-5,9,me.value));
+		alert(a.sort());
+	}	
+	
+	function testBool(idString){
+			var testValue = document.getElementById(idString).value;
+			alert(testValue == true);
+			if(testValue == true){
+				alert(testValue+"我错了，这样是可以的。。。");
+				}
+			if(testValue){
+				alert(testValue+"其实我也没有错，这样依然可以。");
+				}	
+				
+			/**
+			if("1"==true){
+					alert("'1'==true");
+				}
+			if("1"){
+					alert("'1'");
+				}	
+			**/	
+		}
+	
+	function modifytitle(){
+			document.title = "这个是标题一嘛！";
+			setTimeout("document.title='这个不是标题'",5000);
+		}
+	
+	opt = {
+			title:'test',
+			content:'nothing',
+			dotest:function(){alert('123');}
+		};
+	function objTest(){
+			var tt = opt;
+			tt.dotest();
+		};	
+	</script>
+
+</head>
+
+
+<body>
+<input id="textId1" placeholder = "输入1测试switch" />
+<input type="button" value="测试switch语句" onclick="testSwitch('textId1')"/>
+<input type="button" value="测试if语句" onclick="testBool('textId1')"/>
+<input type="button" value="js修改title" onclick="modifytitle()"/>
+<input name = "123" id="id1" onkeyup="testthis(this);" />
+
+<br>
+<div  style="background:#d7d7d7; width:100%; border-radius:30px;  display:block;height:20px; line-height:20px;margin-bottom:15px; position:relative;">
+					    <span style="width:50%;float:left; background:#84c200; border-radius:30px 0px 0px 30px; text-align:center; height:20px; line-height:20px;" ></span>
+<span style="width:30%;  float:left; border-radius:0px 30px 30px 30px; text-align:center; height:20px;"></span>				
+<div style="position:absolute; top:0px; left:0px; text-align:center;width:100%;">
+已用50%（已用：75元，共：150元）</div>
+<br>
+
+<input type="button" value="测试对象" onclick="objTest();" />
+<audio width="30%" height="30px;" controls/><br>
+<vedio width="30%" height="120px;" controls />
+<div class="nano">
+<div class="content">
+<p>
+	以一滴水珠的微渺，我遇见了大海的辽阔，灵动的雨滴撩拨起苍天的情丝，让那苍天倾雨如注，淹没我思念的心田；以一粒火星的黯淡，我遇见了火海的光茫，跳跃的火光点燃了大地的情怀，让那大地火光冲天，照亮了我渴求的眼眸。相遇是一树暖，暖照春天的阳光，暖沐夏天的雨露，暖盈秋天的月光，暖送冬天的冰雪，相遇是一片情，情催花开，情催鸟鸣，情催月朗，情催心暖，遇见是相知的浪漫，倾情是岁月的等待，相遇便相知，相知便倾情，烟雨红尘中我愿与你共一场萍水相逢的浪漫和等待。
+
+遇见在那旭日初升时，顶着满天繁杂的星光，从那霞光微露的晨曦中你神清气爽地走出来，星星点亮你皎洁的目光，晨露淋湿你黑色的头发，朝阳映红你俊朗的脸庞，冷风吹飞你飘洒的衣襟。迎着旭阳，我向你走去，我的清新的目光让你如沐清晖，我的玲珑的话语让你感怀不已，我的眼神是一道霞光，照亮了你渴求的心扉；我的神情是一道魔咒，震撼了你焦灼的情怀。于是，我和你，沐浴着清晨的霞光，一起走向那云水之湄。“蒹葭苍苍，白露为霜。所谓伊人，在水一方。溯洄从之，道阻且长。溯游从之，宛在水中央”。一条轻悠的河流，辗转自那天际流淌而来，她是天上的银河撒落人间，河水清清，芳草凄凄，碧色苍苍，白露为霜，寻一片云霞为轻舟，我倚在船头瞭望着远方，我在找寻那一个你来与我共一场清欢。于是，你来了，和煦的春风将你思慕我的情意送达我的心田，我的眼波看到你苦苦寻觅我芳踪的焦急和等待，你来了，你来了，你拨开那肆意横生的芦苇荡，一袭白霜将你描摹成一个洁白的写意，你搭上了我的轻舟，四目相望中你和我的心随那流淌的河流飘向了远方。啊！我就是那位伊人，在水一方，你就是那多情的人儿，溯 流而上，来找寻我的方向。这时的遇见，她唯美了时光，她惊艳了流年，她是心底流淌着的那弘清泉，她是眼里灵动着的那幅画面。
+
+遇见在那冬日雪飘时，寒冬十月，雪花纷飞，一片白色苍茫掩映中，一间木屋她静静地屹立在那山脚下，木屋古朴的颜色在茫茫雪原中若有似无，几树红梅在雪花飘舞中傲然绽放，那红色的梅花开得馨香、开得从容，铮铮铁骨傲然屹立在风中，彰显出凌然之气。雪映梅红，梅显雪白，你中有我，我中有你，天作之合中雪和梅宛若一对恋人，在苍山雪海中演绎着眉目传情。推开静立着的木屋的门，我静静地坐于一堆篝火旁，清茶煮水，掩面吟诗，吟罢唐诗的婉约，再咏宋词的缠绵，碧海青天是我心，月映清泉是我意，掬一捧清泉润心田，摘一片荷叶遮雨露，我在等待，等一位青衣素装的你来到我的眼前，我要你明眸皓齿的清姿掩不住你诗韵三千的风流；我要你玉树临风的神容藏不住你风华绝代的韵骨。于是，在这飘雪的黄昏，你推门而入，“日暮苍山远，天寒白屋贫。柴门闻犬吠，风雪夜归人”。抖落一身风雪，你拥我入怀，静谧中，我听到两颗年轻的心在跳动，风声婉转中听到花儿绽放的声音，明月清照中映出清泉流淌的身影。共一方明月清天作证你我的爱恋，书一阙情意悠长叙诉你我的情怀。这时的遇见，她让苍天动容，她让流水含情，她明媚着春天的暖阳，她滋润着夏天的细雨，她能感天，她能动地，她能让人间开出那万古不谢的山花。
+
+遇见在那月照清泉时，月光幽幽，清韵悠远，远山含黛的媚影衬托出月映清泉的浪漫。十五的月儿圆又圆，银盘似的挂在天际上发出清幽的月光，那朦胧的月影中嫦娥姐姐在水袖长舞，翩然若鸿，她是在思念着她的夫君——后羿，于是，她在眺望人间，她看到一座青山上，青色的树木掩映着一股清泉，清泉那潺潺流动着的音韵打破深山的孤寂，清泉流过山涧小径，小径被浣洗得纤尘不染，清泉流过山涧石头，石头被冲刷得眉清目秀。“空山新雨后，天气晚来秋。明月松间照，清泉石上流。竹喧归浣女，莲动下渔舟。随意春芳歇，王孙自可留”。是啊，在那明月松间照，清泉石上流的清幽的山涧，你，衣袂飘飘，手执一只洞箫，从那深山中走来，清凉的月光将你的身影拉得很长很长，你的箫声幽怨婉转而又清亮灵动，你让黄莺听了哑了亮嗓，你让百花听了低下了头颅，你，为什么这样的忧伤，原来你是在等待，等待你的心上人——我，来到你的面前，你想看到我如西施浣纱一样在这月光下的清泉中浣洗我和你爱的誓言，你想看到我如嫦娥一样在你的面前跳一曲霓裳羽衣舞。这时的遇见，她是月光照耀清泉时那一份爱的交融，她是清泉流过石头时那一份情的感动，爱的交融和情的感动她能让天空中的月亮更明，她能让山涧中的清泉更清，她能让我和你的爱恋更悠远。
+
+相遇是首歌，歌声情意长，相遇是幅画，画面意悠然。相遇是春天你一仰头，刚好我在瞭望天空；相遇是夏天你一吟唱，刚好我在倾耳聆听；相遇是秋天你在作诗，刚好我在吟咏歌赋；相遇是冬天你在赏雪，刚好我就是红梅树下那一位美丽的女子。相遇便相知，相知便倾情，倾情便感动，感动便等待。一份美丽的相遇她如若漂亮的蝴蝶飞越过沧海而看到满树繁花；一份浪漫的相遇她如若冬日的雪花越过夏季的细雨看到春天的暖阳。相知是情，相知是意，相知是相濡以沫的爱恋，相知是牵手到老的承诺，让相知的花结出倾情的果，让倾情的果使你我流出感动的眼泪，最后，再让感动的眼泪让你我站在天之涯、海之角深情地互相等待，让“相知遇见唯美了等待”成为一句永不可改的爱的誓言！
+</p>
+</div>
+</div>	
+
+<div style="background-color:#ccc;width:30%,height:20%;>KKKKKKKKKKKKKKKKK</div>
+</body>
+</html>
