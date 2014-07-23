@@ -29,6 +29,15 @@ class B extends SelfBounded<A> {
 }
 
 class C extends SelfBounded<C> {
+	/** 
+	 * @Title: setAndGet 
+	 * @Description: TODO 
+	 * @param @param arg
+	 * @param @return   
+	 * @return C  
+	 * @throws 
+	 * @see Any changes please send mail to:superman166@126.com ~!~KEEP BUG AWAY AND CODE WITH U! 
+	 */
 	C setAndGet(C arg) {
 		set(arg);
 		return get();
