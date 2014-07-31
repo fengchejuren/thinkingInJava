@@ -2,12 +2,19 @@ package generics;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
 
 public class Apply {
 
 	public static <T, S extends Iterable<? extends T>> void apply(S seq,
+=======
+
+public class Apply {
+
+	public static <T, S extends Iterable<? extends T>> void Apply(S seq,
+>>>>>>> db82709c9dc21dd648e5fa8bdb6c69315ca061b7
 			Method f, Object... arg) {
 		try {
 			for (T t : seq)
@@ -28,6 +35,7 @@ class Shape{
 	}
 }
 
+<<<<<<< HEAD
 class Square extends Shape{ }
 
 class FilledList<T> extends ArrayList<T>{
@@ -61,6 +69,11 @@ class ApplyTest {
 	}
 	
 }
+=======
+
+
+
+>>>>>>> db82709c9dc21dd648e5fa8bdb6c69315ca061b7
 
 
 
