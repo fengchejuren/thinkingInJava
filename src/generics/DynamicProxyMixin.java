@@ -1,8 +1,5 @@
 package generics;
 
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Method;
-import java.util.Map;
 
 
 /** 可以使用动态代理来实现一种比装饰器模式更贴近混合模式的机制

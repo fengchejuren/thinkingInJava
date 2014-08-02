@@ -12,11 +12,11 @@ public class ArrayOfGenerics {
 		List[] la = new List[10];
 		ls = (List<String>[])la;		
 		ls[0] = new ArrayList<String>();
-		//编译期错误，compile-time checking produces an error
+		//缂栬瘧鏈熼敊璇紝compile-time checking produces an error
 		//ls[1] = new ArrayList<Integer>();
 		
 		Object[] objects = ls;
-		//不会报错，因为List<String> is a type of Object
+		//涓嶄細鎶ラ敊锛屽洜涓篖ist<String> is a type of Object
 		objects[1] = new ArrayList<Integer>();
 		
 		List<BerylliumSphere>[] spheres = (List<BerylliumSphere>[])new List[10];

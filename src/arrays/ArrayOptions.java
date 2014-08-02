@@ -2,7 +2,7 @@ package arrays;
 
 import java.util.Arrays;
 
-/**数组的初始化
+/**鏁扮粍鐨勫垵濮嬪寲
  * @author Administrator
  *
  */
@@ -47,7 +47,7 @@ public class ArrayOptions {
 		System.out.println(Arrays.toString(i));
 		System.out.println(i[3]);
 		Character[] j = new Character[10];
-		System.out.println(j[3].hashCode());  //空指针异常
+		System.out.println(j[3].hashCode());  //锟斤拷指锟斤拷锟届常
 	}
 	
 }

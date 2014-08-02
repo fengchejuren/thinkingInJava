@@ -2,7 +2,7 @@ package arrays;
 
 import java.util.Arrays;
 
-/**Êı×éÓë·ºĞÍ
+/**æ•°ç»„ä¸æ³›å‹
  * @author Administrator
  *
  */

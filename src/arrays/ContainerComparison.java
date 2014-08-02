@@ -13,7 +13,7 @@ class BerylliumSphere{
 		return " Sphere "+id;
 	}
 }
-/**thinkingInJavachapter16  Êý×é
+/**thinkingInJavachapter16  æ•°ç»„
  * @author Administrator
  *
  */
