@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /** 
  * @Description: TODO
- * @author Rock King 2014年8月5日 下午11:05:16 
+ * @author Rock King 2014骞�8鏈�5鏃� 涓嬪崍11:05:16 
  * ~!^ Keep bugs away and code with U!	
  * @param <T> 
  */ 
@@ -16,7 +16,7 @@ public class CollectionData<T> extends ArrayList<T> {
 	}
 	
 	public static <T> CollectionData<T> list(Generator<T> generator,int quantity){
-		return new CollectionData<>(generator, quantity);
+		return new CollectionData<T>(generator, quantity);
 		
 	}
 
