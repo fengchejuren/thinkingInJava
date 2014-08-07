@@ -10,9 +10,9 @@ import typeInfo.pets.Individual;
 import typeInfo.pets.Pet;
 
 /** 
- * @Description: TODO
- * @author Rock King 2014年8月8日 上午12:52:07 
- * ~!^ Keep bugs away and code with U!	 
+ * @Description: Indivial
+ * @author Rock King 2014年8月8日 上午2:02:55 
+ * @see ~!^ Keep bugs away and code with U!	 
  */ 
 public class IndivialTest {
 
