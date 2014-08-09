@@ -130,7 +130,7 @@ public class CanonicalMapping {
 				keys[i] = key;			//save as "real" references
 			map.put(key, value);
 		}
-		System.out.println(map);
+		//System.out.println(map);
 		System.gc();
 		
 	}
