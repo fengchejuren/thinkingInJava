@@ -72,6 +72,7 @@ public class LockingMappedFiles {
 				while(buffer.position()<buffer.limit()-1)
 					buffer.put((byte)(buffer.get()+1));
 				TimeUnit.MILLISECONDS.sleep(10000);
+				//在锁住文件期间其他线程对其操作会报错
 				fl.release();
 				System.out.println("Released from "+start+" to "+end);
 			} catch (IOException e) {
