@@ -23,7 +23,7 @@ interface Command{
 public class EnumMaps {
 
 	public static void main(String[] args) {
-		EnumMap<AlarmPoints, Command> eMap = new EnumMap<>(AlarmPoints.class);
+		EnumMap<AlarmPoints, Command> eMap = new EnumMap<AlarmPoints, Command>(AlarmPoints.class);
 		eMap.put(AlarmPoints.BATHROOM, new Command() {
 			@Override
 			public void action() {
