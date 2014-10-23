@@ -4,7 +4,6 @@
 package gui;
 
 import java.awt.Color;
-import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
@@ -21,7 +20,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-import sun.tools.asm.Label;
+import utils.SwingConsole;
 
 /**
  * @author Administrator
@@ -34,8 +33,8 @@ public class TrackEvent extends JFrame{
 			"monseClicked","mousePressed","mouseMoved","mouseReleased","mouseEntered",
 			"mouseExited","mouseDragged"};
 	private MyButton 
-		button1 = new MyButton(Color.blue, "test1"),
-		button2 = new MyButton(Color.blue, "test1");
+		button1 = new MyButton(Color.CYAN, "test1"),
+		button2 = new MyButton(Color.CYAN, "test1");
 	class MyButton extends JButton{
 		void report(String field,String msg){
 			h.get(field).setText(msg);
@@ -132,4 +131,7 @@ public class TrackEvent extends JFrame{
 		add(button2);
 	}
 	
+	public static void main(String[] args) {
+		SwingConsole.run(new TrackEvent(), 700, 500);
+	}
 }
