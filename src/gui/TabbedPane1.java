@@ -40,11 +40,11 @@ public class TabbedPane1 extends JFrame{
 		add(BorderLayout.SOUTH,text);
 		add(tabs);
 	}
-	
 	public static void main(String[] args) {
 		SwingConsole.run(new TabbedPane1(), 400, 250);
 	}
 	
 	
 	
+
 }
