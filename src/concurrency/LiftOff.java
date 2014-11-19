@@ -15,7 +15,7 @@ package concurrency;
 
 public class LiftOff implements Runnable {
 
-	private int countdown = 10;
+	protected int countdown = 10;
 	private static int counttask = 0;
 	private final int id = counttask++;
 	public LiftOff(){}
