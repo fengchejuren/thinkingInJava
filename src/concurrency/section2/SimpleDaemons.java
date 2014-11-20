@@ -5,7 +5,7 @@
  * @author Rock King 2014年11月20日 上午12:05:56
  * @version V1.0  
  */ 
-package concurrency;
+package concurrency.section2;
 
 import java.util.concurrent.TimeUnit;
 

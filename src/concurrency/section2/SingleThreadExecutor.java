@@ -5,7 +5,7 @@
  * @author Rock King 2014年11月19日 上午12:58:09
  * @version V1.0  
  */ 
-package concurrency;
+package concurrency.section2;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

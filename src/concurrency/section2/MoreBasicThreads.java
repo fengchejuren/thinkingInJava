@@ -5,7 +5,7 @@
  * @author Rock King 2014年11月18日 下午11:08:11
  * @version V1.0  
  */ 
-package concurrency;
+package concurrency.section2;
 
 /** 
  * @Description: TODO
@@ -13,12 +13,12 @@ package concurrency;
  * @see ~!^ Keep bugs away and code with U!	 
  */
 
-public class BasicThreads {
+public class MoreBasicThreads {
 
 	public static void main(String[] args) {
-		Thread t = new Thread(new LiftOff());
-		t.start();
-		System.out.println("waiting for Thread");
+		for(int i=0;i<10;i++)
+			new Thread(new LiftOff()).start();
+		System.out.println("waiting for LiftOff");
 	}
 	
 }
