@@ -5,7 +5,7 @@
  * @author Rock King 2014年11月19日 下午10:45:42
  * @version V1.0  
  */ 
-package concurrency;
+package concurrency.section2;
 
 import java.util.ArrayList;
 import java.util.concurrent.Callable;

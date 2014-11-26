@@ -5,7 +5,7 @@
  * @author Rock King 2014年11月18日 下午10:57:15
  * @version V1.0  
  */ 
-package concurrency;
+package concurrency.section2;
 
 /** 
  * @Description: TODO
