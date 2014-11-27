@@ -1,12 +1,12 @@
-package concurrency.section5;
+package concurrency.section5.waxomatic;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-/**Ä£ÄâÆû³µµÄÅ×¹âºÍ´òÀ¯¡£Æû³µ±ØÐëÏÈÅ×¹âºó´òÀ¯
- * wax ´òÀ¯£¬
- * buffing Å×¹â
+/**Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¹ï¿½Í´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¹ï¿½ï¿½ï¿½ï¿½ï¿½
+ * wax ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * buffing ï¿½×¹ï¿½
  * @author Administrator
  *
  */

@@ -1,4 +1,4 @@
-package concurrency.section5;
+package concurrency.section5.waxomatic2;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
