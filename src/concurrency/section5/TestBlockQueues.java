@@ -9,11 +9,11 @@ import java.util.concurrent.SynchronousQueue;
 
 import concurrency.section2.LiftOff;
 
-class LiftOffRunner2 implements Runnable {
+class LiftOffRunner implements Runnable {
 
 	private BlockingQueue<LiftOff> rockets ;
 	
-	public LiftOffRunner2(BlockingQueue<LiftOff> queue){
+	public LiftOffRunner(BlockingQueue<LiftOff> queue){
 		this.rockets = queue;
 	}
 	
@@ -55,7 +55,7 @@ class LiftOffRunner2 implements Runnable {
 	 }
 	 static void test(String msg,BlockingQueue<LiftOff> rocktes){
 		 System.out.println(msg);
-		 LiftOffRunner2 runner = new LiftOffRunner2(rocktes);
+		 LiftOffRunner runner = new LiftOffRunner(rocktes);
 		 Thread t = new Thread(runner);
 		 t.start();
 		 for(int i=0;i<5;i++){
