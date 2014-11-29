@@ -117,7 +117,7 @@ class Eater implements Runnable{
 		try {
 			while(!Thread.interrupted()){
 				Toast toast = finishedqQueue.take();
-				if(toast.getStatus().equals(Status.JAMMED)||toast.getId()!=count++){
+				if(toast.getStatus()!=(Status.JAMMED)||toast.getId()!=count++){
 					System.out.println(">>> Error:"+toast);
 					System.exit(1);
 				}else{
