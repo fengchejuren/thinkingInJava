@@ -1,4 +1,4 @@
-package concurrency.section9;
+package concurrency.section9.lockingTest;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
