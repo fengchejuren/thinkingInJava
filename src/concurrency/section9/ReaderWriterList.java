@@ -72,7 +72,7 @@ class ReaderWriterListTest {
 			try {
 				while(!Thread.interrupted()){
 					for(int i=0;i<SIZE;i++){
-						System.out.println(list.get(i));
+						System.out.println("index:"+i+" "+list.get(i));
 						TimeUnit.MILLISECONDS.sleep(1);
 					}
 				}
