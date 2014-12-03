@@ -2,7 +2,7 @@
  * @Title: Philosopher.java 
  * @Package concurrency.section6 
  * @Description: TODO 
- * @author Rock King 2014年11月28日 上午12:46:32
+ * @author Rock King 2014骞�11鏈�28鏃� 涓婂崍12:46:32
  * @version V1.0  
  */ 
 package concurrency.section6;
@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 /** 
  * @Description: TODO
- * @author Rock King 2014年11月28日 上午12:46:32 
+ * @author Rock King 2014骞�11鏈�28鏃� 涓婂崍12:46:32 
  * @see ~!^ Keep bugs away and code with U!	 
  */
 
@@ -44,12 +44,7 @@ public class Philosopher implements Runnable {
 		this.pondarFactory = pondarFactory;
 	}
 
-	/* (非 Javadoc) 
-	 * <p>Title: run</p> 
-	 * <p>Description: </p>  
-	 * @see java.lang.Runnable#run() 
-	 */ 
-	@Override
+
 	public void run() {
 		try {
 			while(!Thread.interrupted()){
@@ -67,7 +62,7 @@ public class Philosopher implements Runnable {
 		}
 	}
 	
-	/* (非 Javadoc) 
+	/* (闈� Javadoc) 
 	 * <p>Title: toString</p> 
 	 * <p>Description: </p> 
 	 * @return 

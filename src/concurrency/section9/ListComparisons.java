@@ -7,6 +7,10 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 import utils.CountingIntegerList;
 
+/**这段代码运行不了
+ * @author Administrator
+ *
+ */
 abstract class ListTest extends Tester<List<Integer>>{
 
 	ListTest(String testId, int nReaders, int nWriters) {
